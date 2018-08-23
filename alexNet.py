@@ -13,8 +13,8 @@ np.random.seed(1000)
 ##import tflearn.datasets.oxflower17 as oxflower17
 ##x, y = oxflower17.load_data(one_hot=True)
 
-train_df =pd.read_csv(r'C:\Users\Admin\Videos\research -OCR\segmentation\shuffled training.csv')
-test_df = pd.read_csv(r'C:\Users\Admin\Videos\research -OCR\segmentation\shuffled testing.csv')
+train_df =pd.read_csv(r'shuffled training.csv')
+test_df = pd.read_csv(r'shuffled testing.csv')
 
 #print(train_df.head())
 
