@@ -56,4 +56,4 @@ class PoolHelper(Layer):
     def get_config(self):
         config = {}
         base_config = super(PoolHelper, self).get_config()
-return dict(list(base_config.items()) + list(config.items()))
+        return dict(list(base_config.items()) + list(config.items()))
