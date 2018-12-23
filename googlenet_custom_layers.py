@@ -1,16 +1,7 @@
 from keras.layers.core import Layer
-from keras.engine import InputSpec
-from keras import backend as K
 import theano.tensor as T
-try:
-    from keras import initializations
-except ImportError:
-    from keras import initializers as initializations
 
 class LRN(Layer):
-    """
-    Custom Layer for Local Response Normalization (LRN)
-    """
 
     def __init__(self, alpha=0.0001,k=1,beta=0.75,n=5, **kwargs):
         self.alpha = alpha
@@ -43,10 +34,7 @@ class LRN(Layer):
 
 
 class PoolHelper(Layer):
-    """
-    Reconcile Keras and Caffe weights
-    """
-
+    
     def __init__(self, **kwargs):
         super(PoolHelper, self).__init__(**kwargs)
     
