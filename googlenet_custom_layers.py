@@ -1,5 +1,5 @@
 from keras.layers.core import Layer
-#import tensorflow as T
+import theano.tensor as T
 
 class LRN(Layer):
 
