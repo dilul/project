@@ -13,7 +13,7 @@ class LRN(Layer):
     def call(self, x, mask=None):
         b, ch, r, c = x.shape
         half_n = self.n // 2 # half the local region
-        input_sqr = T.sqr(x) # square the input
+        input_sqr = T.keras.backend.sqrt(x) # square the input
         extra_channels = T.alloc(0., b, ch + 2*half_n, r, c) # make an empty tensor with zero pads along channel dimension
         input_sqr = T.set_subtensor(extra_channels[:, half_n:half_n+ch, :, :],input_sqr) # set the center to be the squared input
         scale = self.k # offset for the scale
